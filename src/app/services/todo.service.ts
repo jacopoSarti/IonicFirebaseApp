@@ -45,7 +45,11 @@ export class TodoService {
     return this.todosCollection.doc(id).update(todo);
   }
 
-  addTodo() {
-    return this todosCollection.add(todo);
+  addTodo(todo: Todo) {
+    return this.todosCollection.add(todo);
+  }
+
+  removeTodo(id) {
+    return this.todosCollection.doc(id).delete();
   }
 }
